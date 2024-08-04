@@ -1,12 +1,8 @@
 import express from 'express'
-import { Login, Logout, Signup } from '../controllers/user.controllers.js'
+import protectRoute from '../middleware/protectRoute.js'
+import { getUsersForSidebar } from '../controllers/user.controllers.js'
+const route = express.Router()
 
-const router = express.Router()
+route.get('/',protectRoute,getUsersForSidebar)
 
-router.post('/signup',Signup)
-
-router.post('/login',Login)
-
-router.post('/logout',Logout)
-
-export default router
+export default route
