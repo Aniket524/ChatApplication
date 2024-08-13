@@ -20,6 +20,8 @@ const useSignup = () => {
 
             const data = res.json()
             console.log(data)
+
+            // Store User to Local Storage
         } catch (error) {
             console.log(error.response.data.error)
             toast.error(error.response.data.error)
