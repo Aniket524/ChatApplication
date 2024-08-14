@@ -18,7 +18,7 @@ const Signup = () => {
     const handleSubmit = async(e) => {
         e.preventDefault()
         // alert('function called')
-        console.log(inputs)
+        console.log('signup function calling')
         await signup(inputs)
     }
 
